@@ -11,7 +11,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage ('Sonar Analysis'){
+        /*stage ('Sonar Analysis'){ VERIFICAR PORQUE TÁ DANDO TIMEOUT
             environment {
                 scannerHome = tool 'SONAR_SCANNER'
             }
@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        /*stage ('Quality Gate'){ VERIFICAR PORQUE ESTÁ DANDO ERRO
+        stage ('Quality Gate'){ VERIFICAR PORQUE ESTÁ DANDO ERRO
             steps {
                 sleep(5)
                 timeout(time: 1, unit: 'MINUTES'){
