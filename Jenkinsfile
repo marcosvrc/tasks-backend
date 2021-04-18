@@ -67,7 +67,7 @@ pipeline {
         }
         stage ('Heatlth Check Fronted') {
             steps{
-                sleep(120)
+                sleep(30)
                dir('functional-test'){
                    sh 'mvn verify -Dskip.surefire.tests'
                }
