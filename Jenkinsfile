@@ -55,7 +55,7 @@ pipeline {
             steps{
                 dir('functional-test'){
                     git 'https://github.com/marcosvrc/tasks-functional_tests'
-                //sh 'mvn test'
+                    sh 'mvn test'
                 }
             }
         }
