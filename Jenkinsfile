@@ -65,5 +65,13 @@ pipeline {
                 sh 'docker-compose up -d'
             }
         }
+        stage ('Heatlth Check Fronted') {
+            steps{
+                sleep(120)
+               dir('functional-test'){
+                   sh 'mvn verify -Dskip.surefire.tests'
+               }
+            }
+        }
     }
 }
